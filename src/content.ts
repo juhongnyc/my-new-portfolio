@@ -80,15 +80,21 @@ export const featuredCaseStudy = {
 
 export const processSteps = [
   {
-    title: 'Define',
-    body: 'Clarify goal, constraints, and success criteria. Draft the story before polishing visuals.',
+    title: 'Clarify',
+    body: 'Set goals, success criteria, and story outline. I define content and success metrics first, then use Claude AI to draft the user story.',
   },
-  { title: 'Explore', body: 'Sketch flows and IA. Identify risky assumptions early with quick checks.' },
   {
-    title: 'Design',
-    body: 'Build in Figma with a consistent spacing + type scale. If a design library is established, skip Figma and design directly in Cursor, similar to coding.',
+    title: 'Explore',
+    body: 'Sketch IA and spot risks early. Cursor AI helps with text-based IA sketches, Copilot simulates and prioritizes risks.',
   },
-  { title: 'Build + QA', body: 'Translate to Tailwind. QA spacing, states, and responsiveness against Figma.' },
+  {
+    title: 'Build',
+    body: 'Consistent spacing + design library. If a company design library exists, I use that. Otherwise, Cursor AI + Copilot generate React/Tailwind code directly, auto-applying shadcn/ui or similar libraries.',
+  },
+  {
+    title: 'Translate',
+    body: 'GA setup, states, and responsiveness. Claude AI optimizes graphic assets, Tailwind handles states and responsiveness — test live in the browser.',
+  },
 ]
 
 export type Stat = {
@@ -112,10 +118,10 @@ export const vibecoding = {
   ],
   workflow: [
     { title: 'Frame', body: 'Define "done" early to align scope, quality, and expectations before generating anything.' },
-    { title: 'Generate', body: 'Ask AI for a minimal Tailwind layout and content scaffolding.' },
-    { title: 'Refine', body: 'Iterate on hierarchy, spacing, and microcopy.' },
-    { title: 'Implement', body: 'Turn into React components with readable utilities.' },
-    { title: 'QA', body: 'Compare against Figma, test md/lg, fix edge cases.' },
+    { title: 'Generate', body: 'Provide IA to AI, then get layout and content scaffolding generated.' },
+    { title: 'Refine', body: 'Iterate on hierarchy, spacing, and microcopy in the browser.' },
+    { title: 'Implement', body: 'Turn into React components with readable relevant library utilities.' },
+    { title: 'QA', body: 'Compare against Figma or aligned design expectation, test md/lg breakpoints, fix edge cases.' },
   ],
   promptTemplate: `Hey! Let's build a responsive single-page portfolio together.
 Stack: React + Vite + TailwindCSS

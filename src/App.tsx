@@ -10,6 +10,7 @@ import { profile } from './content'
 import { DevTodoPanel } from './components/DevTodoPanel'
 import { useTheme } from './hooks/useTheme'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   const { theme, setTheme } = useTheme()
@@ -28,6 +29,7 @@ function App() {
       </main>
       {import.meta.env.DEV ? <DevTodoPanel /> : null}
       <SpeedInsights />
+      <Analytics />
       <footer className="border-t border-white/10">
         <div className="mx-auto max-w-6xl px-4 py-8">
           <div className="text-sm text-zinc-400">

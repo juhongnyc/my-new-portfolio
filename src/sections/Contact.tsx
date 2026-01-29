@@ -11,7 +11,7 @@ export function Contact() {
       subtitle="If you're hiring or collaborating, send me a message."
     >
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="relative rounded-2xl border border-slate-300 bg-slate-100 p-6 shadow-sm transition-transform duration-200 ease-out hover:scale-[1.06] hover:z-10 origin-center dark:border-white/10 dark:bg-white/5 dark:shadow-none">
+        <div className="relative rounded-2xl border border-slate-300 bg-indigo-50/30 p-6 shadow-sm transition-transform duration-200 ease-out hover:scale-[1.06] hover:z-10 origin-center dark:border-white/10 dark:bg-white/5 dark:shadow-none">
           <p className="text-sm text-zinc-700 dark:text-zinc-300">Email</p>
           <p className="mt-2 text-base font-medium text-zinc-900 dark:text-zinc-50">{profile.email}</p>
           <div className="mt-5 flex flex-wrap gap-3">
@@ -24,7 +24,7 @@ export function Contact() {
           </div>
         </div>
 
-        <div className="relative rounded-2xl border border-slate-300 bg-slate-100 p-6 shadow-sm transition-transform duration-200 ease-out hover:scale-[1.06] hover:z-10 origin-center dark:border-white/10 dark:bg-white/5 dark:shadow-none">
+        <div className="relative rounded-2xl border border-slate-300 bg-indigo-50/30 p-6 shadow-sm transition-transform duration-200 ease-out hover:scale-[1.06] hover:z-10 origin-center dark:border-white/10 dark:bg-white/5 dark:shadow-none">
           <p className="text-sm text-zinc-700 dark:text-zinc-300">Links</p>
           <ul className="mt-4 space-y-3 text-sm">
             {profile.links.map((l) => (

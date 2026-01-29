@@ -13,7 +13,7 @@ export function Process() {
         {processSteps.map((s, idx) => (
           <div
             key={s.title}
-            className="relative rounded-2xl border border-slate-300 bg-slate-100 p-6 shadow-sm transition-transform duration-200 ease-out hover:scale-[1.06] hover:z-10 origin-center dark:border-white/10 dark:bg-white/5 dark:shadow-none"
+            className="relative rounded-2xl border border-slate-300 bg-indigo-50/30 p-6 shadow-sm transition-transform duration-200 ease-out hover:scale-[1.06] hover:z-10 origin-center dark:border-white/10 dark:bg-white/5 dark:shadow-none"
           >
             <div className="flex items-baseline gap-3">
               <span className="text-xs text-zinc-500 dark:text-zinc-400">0{idx + 1}</span>

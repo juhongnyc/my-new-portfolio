@@ -23,7 +23,7 @@ export function About() {
       title="How I work"
       subtitle="I'm a UX designer who cares about clarity, constraints, and implementation details. I also build generative workflows and automation to streamline content creation and management."
     >
-      <div className="grid gap-10 md:grid-cols-2 md:gap-12">
+      <div className="grid gap-10 md:grid-cols-2 md:gap-12 md:items-start">
         <div className="space-y-4 text-zinc-700 dark:text-zinc-300">
           <p>
             I design digital products end-to-end: define the problem, map flows, prototype in Figma, and work closely
@@ -39,7 +39,7 @@ export function About() {
           </ul>
         </div>
 
-        <div className="rounded-2xl border border-slate-300 bg-slate-100 p-6 shadow-sm transition-transform duration-200 ease-out hover:scale-[1.06] hover:z-10 origin-center dark:border-white/10 dark:bg-white/5 dark:shadow-none">
+        <div className="rounded-2xl border border-slate-300 bg-indigo-50/30 p-6 shadow-sm transition-transform duration-200 ease-out hover:scale-[1.06] hover:z-10 origin-center dark:border-white/10 dark:bg-white/5 dark:shadow-none md:-mt-2">
           <dl className="grid gap-5">
             {skills.map((s) => (
               <div key={s.label}>

@@ -38,7 +38,7 @@ export function HighlightProjects() {
           {highlightProjects.map((p) => (
             <article
               key={p.title}
-              className="rounded-2xl border border-slate-300 bg-slate-100 p-6 shadow-sm transition hover:bg-slate-200 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:bg-white/10"
+              className="rounded-2xl border border-slate-300 bg-indigo-50/30 p-6 shadow-sm transition hover:bg-indigo-50/50 dark:border-white/10 dark:bg-white/5 dark:shadow-none dark:hover:bg-white/10"
             >
               <h3 className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">{p.title}</h3>
               {p.period ? (

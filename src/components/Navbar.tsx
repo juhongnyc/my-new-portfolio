@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Container } from './Container'
 import { profile } from '../content'
 import type { Theme } from '../hooks/useTheme'
@@ -18,6 +18,7 @@ type NavbarProps = {
 
 export function Navbar({ theme, setTheme }: NavbarProps) {
   const [isAnimating, setIsAnimating] = useState(false)
+  const [scrollProgress, setScrollProgress] = useState(0)
 
   const resolvedIsDark =
     theme === 'dark' ||
@@ -32,8 +33,26 @@ export function Navbar({ theme, setTheme }: NavbarProps) {
     setTimeout(() => setIsAnimating(false), 150)
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+      const scrollTop = window.scrollY || document.documentElement.scrollTop
+      const scrollableHeight = documentHeight - windowHeight
+      const progress = scrollableHeight > 0 ? (scrollTop / scrollableHeight) * 100 : 0
+      setScrollProgress(progress)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll() // 초기 값 설정
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200/60 bg-white/50 backdrop-blur dark:border-white/10 dark:bg-zinc-950/50">
+    <header className="relative sticky top-0 z-50 border-b border-zinc-200/60 bg-white/50 backdrop-blur dark:border-white/10 dark:bg-zinc-950/50">
+      {/* Scroll Progress Bar */}
+      <div className="absolute bottom-0 left-0 h-0.5 bg-blue-600 dark:bg-blue-500 transition-all duration-150 ease-out" style={{ width: `${scrollProgress}%` }} />
       <Container>
         <div className="flex h-14 items-center justify-between">
           <a href="#top" className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -60,7 +79,7 @@ export function Navbar({ theme, setTheme }: NavbarProps) {
             <button
               type="button"
               onClick={handleToggleTheme}
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 text-xs text-gray-600 transition-colors duration-200 ease-out hover:border-gray-900 hover:text-gray-900 dark:border-gray-700 dark:text-gray-300 dark:hover:border-gray-100 dark:hover:text-gray-100"
+              className="inline-flex items-center justify-center rounded-lg border border-zinc-300 bg-white px-3 py-1.5 text-sm text-zinc-900 transition-colors duration-200 ease-out hover:bg-zinc-100 dark:border-white/10 dark:bg-white/5 dark:text-zinc-100 dark:hover:bg-white/10"
               aria-label="Toggle color mode"
             >
               <span

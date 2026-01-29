@@ -11,8 +11,12 @@ type SectionProps = {
 
 export function Section({ id, eyebrow, title, subtitle, children }: SectionProps) {
   return (
-    <section id={id} className="scroll-mt-20 py-16 md:py-24">
-      <Container>
+    <section id={id} className="relative overflow-hidden scroll-mt-20 py-16 md:py-24">
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-indigo-500/10 blur-3xl animate-float-x" />
+        <div className="absolute -bottom-32 right-[-10%] h-80 w-80 rounded-full bg-fuchsia-500/8 blur-3xl animate-float-x-reverse" />
+      </div>
+      <Container className="relative">
         <header className="max-w-2xl">
           {eyebrow ? (
             <p className="text-xs font-medium tracking-widest text-zinc-500 uppercase dark:text-zinc-400">{eyebrow}</p>

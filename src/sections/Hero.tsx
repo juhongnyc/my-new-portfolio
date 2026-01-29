@@ -6,8 +6,8 @@ export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden py-16 md:py-24">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-indigo-500/15 blur-3xl" />
-        <div className="absolute -bottom-32 right-[-10%] h-80 w-80 rounded-full bg-fuchsia-500/10 blur-3xl" />
+        <div className="absolute -top-24 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-indigo-500/15 blur-3xl animate-float-x" />
+        <div className="absolute -bottom-32 right-[-10%] h-80 w-80 rounded-full bg-fuchsia-500/10 blur-3xl animate-float-x-reverse" />
       </div>
 
       <Container>

@@ -108,10 +108,10 @@ export const vibecoding = {
     'Keep prompts specific: goal, audience, constraints, acceptance criteria.',
     'Ask for 2–3 options, pick one, then iterate in small diffs.',
     'Validate in the browser early: spacing, contrast, breakpoints.',
-    'Use AI for structure + copy scaffolding; you own the final decisions.',
+    'Use AI for structure and scaffolding — final decisions stay with the designer.',
   ],
   workflow: [
-    { title: 'Frame', body: 'Write a “definition of done” and section outline.' },
+    { title: 'Frame', body: 'Define "done" early to align scope, quality, and expectations before generating anything.' },
     { title: 'Generate', body: 'Ask AI for a minimal Tailwind layout and content scaffolding.' },
     { title: 'Refine', body: 'Iterate on hierarchy, spacing, and microcopy.' },
     { title: 'Implement', body: 'Turn into React components with readable utilities.' },

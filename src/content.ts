@@ -17,7 +17,10 @@ export const profile = {
   links: [
     { label: "Juho's previous site", href: 'https://www.juholee.com/' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/juho-lee/' },
-    { label: 'Resume', href: 'https://www.juholee.com/resume' },
+    {
+      label: 'Resume',
+      href: 'https://www.juholee.com/s/JUHO-LEE_Resume_2026_04.pdf',
+    },
   ],
 }
 
